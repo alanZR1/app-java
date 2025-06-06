@@ -1,6 +1,6 @@
 # Bike Store App
 
-Aplicación de consola en Java que simula una tienda de bicicletas. Permite al usuario seleccionar productos y agregarlos a un carrito de compras.
+Aplicación en Java que simula una tienda de bicicletas. Permite al usuario seleccionar productos y agregarlos a un carrito de compras.
 
 ## Estructura
 

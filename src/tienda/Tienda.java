@@ -1,7 +1,6 @@
 package tienda;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Tienda {
     private List<Producto> productos;
@@ -17,12 +16,4 @@ public class Tienda {
     public List<Producto> getProductos() {
         return productos;
     }
-
-    public Producto getProducto(int index) {
-        if (index >= 0 && index < productos.size()) {
-            return productos.get(index);
-        }
-        return null;
-    }
 }
-

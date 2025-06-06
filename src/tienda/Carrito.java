@@ -1,7 +1,6 @@
 package tienda;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Carrito {
     private List<Producto> productos;
@@ -14,16 +13,26 @@ public class Carrito {
         productos.add(p);
     }
 
+    public void eliminarProducto(Producto p) {
+        productos.remove(p);
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
     public double calcularTotal() {
         return productos.stream().mapToDouble(Producto::getPrecio).sum();
     }
 
-    public String mostrarCarrito() {
+    public String generarTicket() {
         StringBuilder sb = new StringBuilder();
+        sb.append("--- Ticket de Compra ---\n");
         for (Producto p : productos) {
-            sb.append(p.toString()).append("\n");
+            sb.append(p.getNombre()).append(" - $").append(p.getPrecio()).append("\n");
         }
-        sb.append("Total: $").append(calcularTotal());
+        sb.append("-------------------------\n");
+        sb.append("Total: $").append(calcularTotal()).append("\n");
         return sb.toString();
     }
 }
