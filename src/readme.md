@@ -1,17 +1,42 @@
-# Bike Store App
+README - Tienda de Bicicletas (Swing GUI)
+=========================================
 
-Aplicación en Java que simula una tienda de bicicletas. Permite al usuario seleccionar productos y agregarlos a un carrito de compras.
+📦 Estructura de Paquetes:
+---------------------------
+- tienda/: Clases de lógica de negocio
+    - Producto.java: Representa una bicicleta con nombre y precio
+    - Tienda.java: Contiene una lista de bicicletas disponibles
+    - Carrito.java: Maneja los productos seleccionados
+    - Usuario.java: Representa al usuario que compra
 
-## Estructura
+- gui/: Interfaces gráficas usando Swing
+    - PantallaInicio.java: Bienvenida con imagen y campo de nombre
+    - Galeria.java: Muestra catálogo de bicicletas
+    - CarritoVentana.java: Permite ver y eliminar productos del carrito
+    - TicketVentana.java: Muestra ticket final de compra
 
-- `Producto.java`: modelo de producto.
-- `Tienda.java`: catálogo de bicicletas.
-- `Carrito.java`: lógica de carrito.
-- `Main.java`: menú e interacción.
+- Main.java: Punto de entrada del programa
 
-## Compilar y Ejecutar
+🖼️ Requisitos para imágenes:
+----------------------------
+- Coloca la imagen "bicicleta.png" en la carpeta: `src/resources/`
+- Asegúrate de marcar `/resources` como Resources Root en IntelliJ
 
-```bash
-cd src
-javac Main.java tienda/*.java
-java Main
+🛠️ Cómo ejecutar el proyecto:
+-----------------------------
+1. Abrir el proyecto en IntelliJ IDEA
+2. Ejecutar la clase `Main.java`
+3. Ingresar tu nombre, ver catálogo, agregar al carrito y finalizar la compra
+
+✅ Funcionalidades:
+------------------
+- Bienvenida personalizada con imagen
+- Catálogo de bicicletas con opción de agregar al carrito
+- Vista del carrito con opción de eliminar elementos
+- Ticket final con desglose de precios y nombre del usuario
+
+🎯 Posibles mejoras:
+--------------------
+- Persistencia de compras en archivo
+- Gestión de stock o cantidades
+- Ingreso con múltiples usuarios
